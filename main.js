@@ -87,11 +87,15 @@ console.log(modal);
 const body = document.getElementsByTagName("body")[0];
 console.log(body);
 body.append(modal);
+
+modal.addEventListener("click",  () => {
+    document.body.removeChild(modal);
+});
+
 }
 
-function closeModal() {
-    
-}
+
 // -> "Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user"
 // This div should be a 'modal' that covers the main content on the screen
 // BONUS: The modal popup should be able to be closed. Refactor for this functionality
+document.querySelector("#btn").addEventListener("click", show);
